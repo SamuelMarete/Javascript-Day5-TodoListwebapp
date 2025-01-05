@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Todo List App</h1>
+    </header>
+    <div class="container">
+        <!-- Notification Placeholder -->
+        <div id="notification" class="notification" style="display: none;"></div>
+        
+        <!-- Task Form -->
+        <form class="task-form" id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <textarea id="task-desc" placeholder="Task Description" rows="3" required></textarea>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="completed">Completed</button>
+            <button data-filter="incomplete">Incomplete</button>
+        </div>
+
+        <!-- Empty State Message -->
+        <p id="empty-state" class="empty-state" style="display: none;">No tasks available. Add a new task to get started!</p>
+
+        <!-- Task List -->
+        <div class="task-list" id="task-list">
+            <!-- Task items will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

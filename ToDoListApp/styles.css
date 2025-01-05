@@ -1,0 +1,169 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9; /* Light background */
+    color: #000; /* Dark text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #6200ea; /* Purple header */
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 600px;
+    width: 90%; /* Allow for more width on smaller screens */
+    margin: 2rem auto;
+    background: white; /* Light container */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-form input, .task-form textarea, .task-form button {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Full width for inputs */
+    font-size: 1rem;
+}
+
+.task-form button {
+    background-color: #6200ea; /* Primary button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background-color: #3700b3; /* Darker shade for hover */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-buttons button {
+    background-color: #6200ea; /* Default button color */
+    color: white; /* Light button text */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: #3700b3; /* Darker hover effect */
+}
+
+.filter-buttons button.active {
+    background-color: #3700b3; /* Active button color */
+}
+
+.task-list {
+    margin-top: 1.5rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9; /* Light task background */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed h3 {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-details {
+    flex: 1;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6200ea; /* Icon color */
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: color 0.3s;
+}
+
+.task-actions button:hover {
+    color: #3700b3; /* Darker icon color on hover */
+}
+
+.notification {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #6200ea;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10%, 90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
+}
+
+.empty-state {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .filter-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .filter-buttons button {
+        width: 100%; /* Full width for buttons */
+        margin-bottom: 0.5rem; /* Space between buttons */
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .task-actions button {
+        font-size: 1rem;
+    }
+}
