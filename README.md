@@ -18,6 +18,7 @@ Technologies Used
 
 
 Installation
+
 -To run this app locally, follow these steps:
 
 1. Clone this repository:
@@ -35,3 +36,5 @@ Usage
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+Here is a screenshot
+![Screenshot 2025-01-05 203227](https://github.com/user-attachments/assets/62610712-fa0a-4c73-8c0d-a0794b23c528)
